@@ -18,5 +18,11 @@ function invert(array) {
 }
 console.log(invert([1,2,3,4,5]))
 
+//codewars solutions
+const invert = array => array.map(num => -num);
 
+//---------------------------------
+function invert(array) {
+    return array.map( x => x === 0 ? x : -x);
+ }
 
