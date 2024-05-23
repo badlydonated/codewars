@@ -33,6 +33,7 @@ function maxCharacter(str){
         }
     }
     // return max char
+    console.log(charMap)
     return maxChar
 }
 
