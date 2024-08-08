@@ -18,7 +18,7 @@
 //  ["b", "c", "b", "a"]   ["" , "a", "a", "c"]  →     0
 
 //my attempt
-function checkExam(array1, array2) {
+function checkExam(array1,array2) {
     let score = 0
     for (let i = 0; i < array1.length; i++) {
         if (array2[i] == ""){
