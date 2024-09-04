@@ -35,3 +35,17 @@ console.log(combine(objA, objC, objD)) //, { a: 15, b: 20, c: 33, d: 11, e: 8 })
 console.log(combine({}, {}, {})) //, {})
 console.log(combine(objA, objC, {})) //, { a: 15, b: 20, c: 30, d: 11, e: 8 })
  
+// Codewars solutions
+function combine() {
+    var obj = {}
+  
+    for (var i = 0; i < arguments.length; i++) {
+          for (var key in arguments[i]) {
+            obj[key] = obj[key] ? obj[key] + arguments[i][key]: arguments[i][key]
+          }
+    }
+  
+    return obj;
+  }
+
+// ---------------------------------
