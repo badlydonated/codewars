@@ -19,11 +19,16 @@
     // then divide the sum by the number of numbers in the array.
     // then round down to nearest int
 
-function getAverage(grades){
-    let sum = grades.reduce((pv,cv)=>(pv + cv))
-    return Math.floor(sum/grades.length)
-}    
+// function getAverage(grades){
+//     let sum = grades.reduce((pv,cv)=>(pv + cv))
+//     return Math.floor(sum/grades.length)
+// }    
 
 console.log(getAverage([2,2,2,2])) //,2)
 console.log(getAverage([1,2,3,4,5])) //,3);
 console.log(getAverage([1,1,1,1,1,1,1,2])) //,1)
+
+// Leon's answer
+function getAverage(grades){
+    return Math.floor(grades.reduce((pv,cv)=>(pv + cv)) /grades.length)
+}
