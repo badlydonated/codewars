@@ -67,3 +67,28 @@ function duplicateEncode(word){
     return unique;
 
 }  
+
+
+// Leon's solution add to anki
+// PREP:
+    // str -> ingore caps
+    // str -> '(' only once and ')'is more than once
+
+function encodeDupes(str){
+    // toLowerCase to take care of capitalization
+    // since i have to go through each letter, need to split into an array
+    // change to '(' or ')'  ->map()
+    // check for repeats
+    // join() -> str
+    return str.toLowerCase()
+            .split('')
+            .map((c, i, a) => a.indexOf(c) === a.lastIndexOf(c) ? '(' : ')')
+            .join('')
+}
+
+console.log(encodeDupes('din')) // "((("
+console.log(encodeDupes('recede')) // "()()()"
+console.log(encodeDupes('Success')) // ")())())"
+console.log(encodeDupes('Success')) // ")())())"
+console.log(encodeDupes('(( @'))   // ))((
+
