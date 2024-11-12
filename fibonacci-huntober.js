@@ -25,7 +25,7 @@
 // fib -> 0,1, 0+1=1, 1+1=2, 2+1=3, 2+3=5, 5+3=8, 8+5=13 
 // take in a number and return the last generated number in the sequence based on that number.  
 // examples:
-    // fib -> 0,1,1,2,3,5,8,13,21
+    // fib -> 0,1,1,2,3,5,8,13,21,34
     // f(3) ->2
     // f(4) ->3
 
@@ -42,7 +42,15 @@ function fib(position){
 console.log(fib(3), '2')
 console.log(fib(4), '3')
 
-// recursion
+// ----------STANDARD FIBONACCI SEQUENCE GENERATOR (given 0 and 1) -------------------
+function fibo(n) {
+    if(  n < 2 ){
+        return n
+    }
+    return fib(n-1) + fib(n-2)
+}
+
+// recursion EX
 function countDown(n){
     if(n===0){
         console.log('DUNZO')
@@ -51,3 +59,18 @@ function countDown(n){
         countDown(n-1)
     }
 }
+
+// memoization example
+const memo = {}
+function fib(n){
+    if(n < 2){
+        return n
+    }else if(memo[n]){
+        return memo[n]
+    }else{
+        let result = fib(n-1) +fib(n-2)
+        memo[n] = result
+        return result
+    }
+}
+
