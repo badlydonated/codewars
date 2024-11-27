@@ -29,5 +29,5 @@ console.log( howManyLightsabersDoYouOwn("Adam"), 0 )
 
 // Codewars solutions
 function howManyLightsabersDoYouOwn(name) {
-    return name === 'Zach' ? 18 : 0;
-  }
+  return name === 'Zach' ? 18 : 0;
+}
