@@ -39,6 +39,12 @@ function fib(position){
     return sequence[position]
 }
 
+// the first time run i=2 so a =2-1 , b = 2-2. a=1, b=0
+// sequence.push(a+b) = (1+0)=1. At the 1 position, 1 is the value so 1 is added to the end of the sequence array
+// now i=3 so a = 3-1=2; b = 3-2=1
+// sequence.push(a+b) = (2+1) = 3. At the 3 position, 2 is the value so 2 is added to the end of the sequence array
+// the loop stops since i=4 which is greater than position(3)
+// the function returns the value at the 3rd position which is 2
 console.log(fib(3), '2')
 console.log(fib(4), '3')
 
@@ -68,7 +74,7 @@ function fib(n){
     }else if(memo[n]){
         return memo[n]
     }else{
-        let result = fib(n-1) +fib(n-2)
+        let result = fib(n-1) + fib(n-2)
         memo[n] = result
         return result
     }
